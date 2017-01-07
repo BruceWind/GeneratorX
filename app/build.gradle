@@ -42,6 +42,6 @@ dependencies {
 
     apt 'com.squareup:javapoet:1.4.0'
     compile 'com.squareup:javapoet:1.4.0'
-//    apt project(':generatorclassx')
-//    compile project(path: ':generatorclassx')
+    apt project(':generatorclassx')
+    compile project(path: ':generatorclassx')
 }

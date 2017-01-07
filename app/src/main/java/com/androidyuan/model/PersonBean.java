@@ -1,4 +1,4 @@
-package com.androidyuan.annotation;
+package com.androidyuan.model;
 
 import android.os.Parcelable;
 import com.androidyuan.SimpleGenerator;
@@ -12,6 +12,5 @@ public abstract class PersonBean implements Parcelable {
     public int age = 0;
 
     public CharSequence str;
-    PersonBean per;
 
 }
