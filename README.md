@@ -11,6 +11,8 @@
 
 -------------------
 ## 使用
+
+先下载jar包：[点我下载](https://github.com/weizongwei5/GeneratorX/raw/master/other/generatorclassx-1.0.1.jar)
 ### 1.apt依赖
 以为涉及到编译时生成，所以需要apt插件，apt是gradle的一个插件，他使注解处理器生成的代码能被Android Studio正确的引用。
 教程：[http://code.neenbedankt.com/gradle-android-apt-plugin/](http://code.neenbedankt.com/gradle-android-apt-plugin/)
