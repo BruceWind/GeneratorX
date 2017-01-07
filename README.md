@@ -1,3 +1,4 @@
+
 # GeneratorX
 帮助项目开发时，自动生成类的代码。
 
@@ -17,9 +18,13 @@
 以为涉及到编译时生成，所以需要apt插件，apt是gradle的一个插件，他使注解处理器生成的代码能被Android Studio正确的引用。
 教程：[http://code.neenbedankt.com/gradle-android-apt-plugin/](http://code.neenbedankt.com/gradle-android-apt-plugin/)
 
-### 2.javapoet依赖
+### 2.apt依赖javapoet和jar
 
 ```
+
+    apt fileTree(dir: 'libs', include: ['*.jar'])//这句加的
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    
     apt 'com.squareup:javapoet:1.4.0'
     compile 'com.squareup:javapoet:1.4.0'
 ```
@@ -33,7 +38,7 @@ public class CLName
 ```
 ## 开始写java代码：
 
-当我写出如下代码
+当我写出如下代码,我build一下
 ```
 @SimpleGenerator
 public abstract class PersonBean implements Parcelable {
@@ -154,14 +159,6 @@ public class PersonBeanX extends PersonBean {
 
 ```
 
-# 
-
--------------------------
 
 代码写的比较急，两周不到完成，应该有些缺陷，欢迎提[issues](https://github.com/weizongwei5/GeneratorX/issues/new)。
 
-## 鸣谢
-
-[https://github.com/square/javapoet](https://github.com/square/javapoet)
-
-[http://code.neenbedankt.com/gradle-android-apt-plugin/](http://code.neenbedankt.com/gradle-android-apt-plugin/)
