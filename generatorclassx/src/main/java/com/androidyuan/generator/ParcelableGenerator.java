@@ -70,6 +70,7 @@ public class ParcelableGenerator extends CodeGenerator {
         //parcelable begin
         builder.addMethod(generateDescribeContents());//describeContents
         builder.addMethod(makeHascodeMethod());//hasCode
+        builder.addMethod(makeEqualsMethod());
         builder.addMethod(makeToStringMethod());//toString
 
 

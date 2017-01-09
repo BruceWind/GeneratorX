@@ -6,8 +6,6 @@ import android.widget.Toast;
 
 import com.androidyuan.model.PersonBeanX;
 
-import java.util.ArrayList;
-
 public class MainActivity extends AppCompatActivity {
 
     private static final String TAG = "MainActivity";
@@ -21,8 +19,9 @@ public class MainActivity extends AppCompatActivity {
         PersonBeanX personBeanX=new PersonBeanX();
         personBeanX.setAge(15);
         PersonBeanX personBeanX1=new PersonBeanX();
+        personBeanX1.setAge(15);
 
-        toast(personBeanX.hashCode()+" "+personBeanX1.hashCode());
+        toast(personBeanX.equals(personBeanX1)+"");
     }
 
 

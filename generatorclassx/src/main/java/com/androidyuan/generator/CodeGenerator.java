@@ -61,6 +61,7 @@ public class CodeGenerator {
             builder.addMethod(makeGetMethod(variablename));
         }
         builder.addMethod(makeHascodeMethod());
+        builder.addMethod(makeEqualsMethod());
         builder.addMethod(makeToStringMethod());
         return builder.build();
     }
@@ -159,6 +160,35 @@ public class CodeGenerator {
         return methodBuilder("toString")// toString()
                 .addModifiers(PUBLIC)//public
                 .returns(String.class)// String
+                .addAnnotation(Override.class)//@Override
+                .addStatement(builder.toString())// 添加方法内的几行代码到这里
+                .build();
+    }
+
+
+    /**
+     * 生成hascode方法
+     *
+     * @return @Override public int toString()
+     */
+    protected MethodSpec makeEqualsMethod() {
+
+        //方法内的几行code this.variable = var;
+        StringBuilder builder = new StringBuilder();
+        builder.append("\nif (o == null) return false;");
+        builder.append("\nif (o == this) return true;");
+
+        builder.append("\nif (o instanceof "+anno.generatorClassName+") {");
+//        builder.append("\n\t"+anno.generatorClassName+" that = ("+anno.generatorClassName+") o;");
+        builder.append("\n\tif (o.hashCode() == this.hashCode()) return true;");
+        builder.append("\n}");
+        builder.append("\nreturn false");
+
+        //方法的 头 和 尾
+        return methodBuilder("equals")//
+                .addModifiers(PUBLIC)//public
+                .addParameter(Object.class,"o")
+                .returns(boolean.class)// String
                 .addAnnotation(Override.class)//@Override
                 .addStatement(builder.toString())// 添加方法内的几行代码到这里
                 .build();

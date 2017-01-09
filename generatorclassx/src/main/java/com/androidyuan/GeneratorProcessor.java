@@ -135,7 +135,7 @@ public class GeneratorProcessor extends AbstractProcessor {
         //打印 用于测试 是否为 parcelable
         if (isParcelable(typeElement)) {
             String message = String.format("Classes %s is parceleble.", ANNOTATION);
-            messager.printMessage(Diagnostic.Kind.OTHER, message, typeElement);
+            //messager.printMessage(Diagnostic.Kind.OTHER, message, typeElement);
         }
         return new AnnotatedClass(typeElement, variableNames, variableMap,
                 isParcelable(typeElement));
