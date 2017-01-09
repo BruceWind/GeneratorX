@@ -13,7 +13,7 @@
 -------------------
 ## 使用
 
-先下载jar包：[点我下载](https://github.com/weizongwei5/GeneratorX/raw/master/other/generatorclassx-1.0.1.jar)
+先下载jar包：[点我下载](https://github.com/weizongwei5/GeneratorX/raw/master/other/generatorclassx-1.0.2.jar)
 ### 1.apt依赖
 以为涉及到编译时生成，所以需要apt插件，apt是gradle的一个插件，他使注解处理器生成的代码能被Android Studio正确的引用。
 教程：[http://code.neenbedankt.com/gradle-android-apt-plugin/](http://code.neenbedankt.com/gradle-android-apt-plugin/)
@@ -51,7 +51,9 @@ public abstract class PersonBean implements Parcelable {
 
 }
 ```
-自动帮我生成一个类 
+
+自动帮我生成一个类
+ 
 ```
 package com.androidyuan.model;
 
@@ -61,6 +63,7 @@ import android.text.TextUtils;
 import com.androidyuan.Helper.ClsHelper;
 import java.lang.CharSequence;
 import java.lang.Enum;
+import java.lang.Object;
 import java.lang.Override;
 import java.lang.String;
 
@@ -152,10 +155,22 @@ public class PersonBeanX extends PersonBean {
   }
 
   @Override
+  public boolean equals(Object o) {
+
+        if (o == null) return false;
+        if (o == this) return true;
+        if (o instanceof PersonBeanX) {
+        	if (o.hashCode() == this.hashCode()) return true;
+        }
+        return false;
+  }
+
+  @Override
   public String toString() {
     return "PersonBeanX{"+"s =  "+s+","+"name =  "+name+","+"age =  "+age+","+"str =  "+str.toString()+"}";
   }
 }
+
 
 ```
 
