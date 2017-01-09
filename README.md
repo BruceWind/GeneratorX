@@ -18,7 +18,7 @@
 以为涉及到编译时生成，所以需要apt插件，apt是gradle的一个插件，他使注解处理器生成的代码能被Android Studio正确的引用。
 教程：[http://code.neenbedankt.com/gradle-android-apt-plugin/](http://code.neenbedankt.com/gradle-android-apt-plugin/)
 
-### 2.apt依赖javapoet和jar
+### 2.gradle中使用apt依赖javapoet和jar
 
 ```
 
