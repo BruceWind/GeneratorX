@@ -1,6 +1,12 @@
 
+
 # GeneratorX
 帮助项目开发时，自动生成类的代码。
+
+### 不再维护请移步到下面地址查看最新的.
+[https://github.com/Scavenges/GeneratorX](https://github.com/Scavenges/GeneratorX)
+
+
 
 会自动生成如下代码
 * 默认构造函数　和　非默认构造函数
@@ -177,3 +183,6 @@ public class PersonBeanX extends PersonBean {
 
 代码写的比较急，两周不到完成，应该有些缺陷，欢迎提[issues](https://github.com/weizongwei5/GeneratorX/issues/new)。
 
+## 停止维护公告:
+***请移步到下面地址查看最新的***
+[https://github.com/Scavenges/GeneratorX](https://github.com/Scavenges/GeneratorX)
