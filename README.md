@@ -151,4 +151,4 @@ public class PersonBeanX extends PersonBean {
 
 ## 停止维护
 
-目前移动到组织去维护了，我不再单独维护这个仓库。[https://raw.githubusercontent.com/Scavenges/GeneratorX](https://raw.githubusercontent.com/Scavenges/GeneratorX)
+目前已经移到Scavenges组织去维护了，我不再单独维护这个仓库。[https://github.com/Scavenges/GeneratorX](https://github.com/Scavenges/GeneratorX)
