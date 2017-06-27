@@ -8,7 +8,7 @@
 1.0.2已经发布。
 ```
 dependencies {
-compile 'com.scavenges:GeneratorX:1.0.1'
+compile 'com.scavenges:GeneratorX:1.0.2'
 }
 ```
 
